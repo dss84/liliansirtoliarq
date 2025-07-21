@@ -24,15 +24,18 @@
     <!-- External stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         /* CSS Variables for easy theme customization */
         :root {
             /* Primary Colors */
-            --primary-color: #D9A299;
-            --primary-dark: #DCC5B2;
-            --primary-light: #F0E4D3;
-            --primary-lighten: #
+            --primary-color: #C78E85;
+            --primary-dark: #B89A91;
+            --primary-light:#FAC6BA;
+            --primary-lighten: #D8D6D9;
+            --primary-footer: #355059;
                 /* Secondary Colors */
                 --secondary-color: #f59e0b;
             --secondary-dark: #d97706;
@@ -47,9 +50,10 @@
             --gray-700: #374151;
             --gray-800: #1f2937;
             --gray-900: #111827;
+            --normal-text: #355059;
 
             /* Typography */
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-size-xs: 0.75rem;
             --font-size-sm: 0.875rem;
             --font-size-base: 1rem;
@@ -106,7 +110,7 @@
         body {
             font-family: var(--font-family);
             line-height: 1.6;
-            color: var(--gray-700);
+            color: var(--normal-text);
             background-color: var(--white);
             overflow-x: hidden;
         }
@@ -273,13 +277,13 @@
         .section-header h2 {
             font-size: var(--font-size-3xl);
             font-weight: 700;
-            color: var(--gray-900);
+            color: var(--normal-text);
             margin-bottom: var(--spacing-4);
         }
 
         .section-header p {
             font-size: var(--font-size-lg);
-            color: var(--gray-600);
+            color: var(--normal-text);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -323,12 +327,12 @@
         .feature-card h3 {
             font-size: var(--font-size-xl);
             font-weight: 600;
-            color: var(--gray-900);
+            color: var(--normal-text);
             margin-bottom: var(--spacing-3);
         }
 
         .feature-card p {
-            color: var(--gray-600);
+            color: var(--normal-text);
             line-height: 1.7;
         }
 
@@ -347,13 +351,13 @@
         .about-text h2 {
             font-size: var(--font-size-3xl);
             font-weight: 700;
-            color: var(--gray-900);
+            color: var(--normal-text);
             margin-bottom: var(--spacing-6);
         }
 
         .about-text p {
             font-size: var(--font-size-lg);
-            color: var(--gray-600);
+            color: var(--normal-text);
             margin-bottom: var(--spacing-6);
             line-height: 1.7;
         }
@@ -379,7 +383,7 @@
 
         .stat-label {
             font-size: var(--font-size-sm);
-            color: var(--gray-600);
+            color: var(--normal-text);
             font-weight: 500;
         }
 
@@ -422,7 +426,7 @@
 
         .testimonial-text {
             font-style: italic;
-            color: var(--gray-700);
+            color: var(--normal-text);
             margin-bottom: var(--spacing-6);
             position: relative;
             z-index: 1;
@@ -449,13 +453,13 @@
 
         .author-info h4 {
             font-weight: 600;
-            color: var(--gray-900);
+            color: var(--normal-text);
             margin-bottom: var(--spacing-1);
         }
 
         .author-info p {
             font-size: var(--font-size-sm);
-            color: var(--gray-600);
+            color: var(--normal-text);
         }
 
         /* CTA section */
@@ -507,7 +511,7 @@
         }
 
         .cta-form h3 {
-            color: var(--gray-900);
+            color: var(--normal-text);
             font-size: var(--font-size-xl);
             font-weight: 600;
             margin-bottom: var(--spacing-6);
@@ -521,7 +525,7 @@
         .form-group label {
             display: block;
             margin-bottom: var(--spacing-2);
-            color: var(--gray-700);
+            color: var(--normal-text);
             font-weight: 500;
         }
 
@@ -546,7 +550,7 @@
 
         .privacy-notice {
             font-size: var(--font-size-xs);
-            color: var(--gray-600);
+            color: var(--normal-text);
             text-align: center;
             margin-top: var(--spacing-4);
             line-height: 1.5;
@@ -554,7 +558,7 @@
 
         /* Footer */
         .footer {
-            background: var(--gray-900);
+            background: var(--primary-footer);
             color: var(--white);
             padding: var(--spacing-12) 0 var(--spacing-6);
         }
@@ -837,11 +841,11 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Sobre a Autora</h2>
-                    <p>Lilian Sirtoli é designer de interiores especializada em espaços compactos, com mais de 10 anos
+                    <p>Lilian Sirtoli é Arquiteta de interiores especializada em espaços compactos, com mais de 10 anos
                         de experiência transformando ambientes pequenos em verdadeiros refúgios de estilo e
                         funcionalidade.</p>
 
-                    <p>Formada em Design de Interiores e pós-graduada em Arquitetura de Interiores, Lilian já ajudou
+                    <p>Formada em Arquitetura e pós-graduada em Arquitetura de Interiores, Lilian já ajudou
                         centenas de pessoas a descobrirem o potencial dos seus espaços, provando que tamanho não é
                         documento quando se trata de criar ambientes incríveis.</p>
 
@@ -891,7 +895,7 @@
                         <div class="author-avatar">MF</div>
                         <div class="author-info">
                             <h4>Maria Fernanda</h4>
-                            <p>Arquiteta, São Paulo</p>
+                            <p>Comerciante, São Paulo</p>
                         </div>
                     </div>
                 </div>
@@ -903,8 +907,8 @@
                     <div class="testimonial-author">
                         <div class="author-avatar">JS</div>
                         <div class="author-info">
-                            <h4>João Silva</h4>
-                            <p>Estudante, Rio de Janeiro</p>
+                            <h4>João Paulo Cardoso</h4>
+                            <p>Dentista, Rio de Janeiro</p>
                         </div>
                     </div>
                 </div>
@@ -917,7 +921,7 @@
                         <div class="author-avatar">AC</div>
                         <div class="author-info">
                             <h4>Ana Clara</h4>
-                            <p>Designer, Belo Horizonte</p>
+                            <p>Designer, Florianópolis</p>
                         </div>
                     </div>
                 </div>
@@ -931,12 +935,12 @@
             <div class="cta-content">
                 <div class="cta-text">
                     <h2>Transforme seu espaço hoje mesmo</h2>
-                    <p>Baixe gratuitamente nosso ebook e descubra como criar ambientes incríveis, independente do
+                    <p>Adquira seu ebook e descubra como criar ambientes incríveis, independente do
                         tamanho do seu espaço. Mais de 80 páginas de conteúdo exclusivo esperando por você!</p>
                 </div>
 
                 <div class="cta-form">
-                    <h3>Baixar Ebook Gratuito</h3>
+                    <h3>Adquira seu eBook hoje mesmo</h3>
                     <form id="downloadForm" action="#" method="POST">
                         <div class="form-group">
                             <label for="name">Nome completo</label>
@@ -950,7 +954,7 @@
 
                         <button type="submit" class="btn btn-primary form-submit">
                             <i class="fas fa-download" style="margin-right: 8px;"></i>
-                            Baixar Agora
+                            Comprar agora
                         </button>
 
                         <p class="privacy-notice">
@@ -972,10 +976,9 @@
                     <p>Especialista em transformar espaços pequenos em ambientes funcionais e estilosos. Ajudando
                         pessoas a descobrirem o potencial dos seus lares.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/liliansirtoli.arq/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/liliansirtoli.arquitetura/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://br.pinterest.com/liliansirtoliarquiteta/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
 
@@ -989,8 +992,12 @@
 
                 <div class="footer-section">
                     <h3>Contato</h3>
-                    <p>contato@lilisirtoli.com.br</p>
-                    <p>+55 (11) 99999-9999</p>
+                    <p>
+                        <a href="mailto:contato@liliansirtoli.arq.br">contato@liliansirtoli.arq.br</a>
+                    </p>
+                    <p>
+                        <a href="tel:0(48)99212-1200">+55 (48) 99212-1200</a>
+                    </p>
                     <p>Florianópolis, SC - Brasil</p>
                 </div>
 
