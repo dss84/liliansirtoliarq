@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Transforme espaços pequenos em ambientes inteligentes com nosso ebook exclusivo. Descubra soluções práticas para maximizar cada metro quadrado do seu lar.">
+    <meta name="keywords"
+        content="decoração, espaços pequenos, ambientes compactos, design de interiores, soluções inteligentes, ebook decoração">
+    <meta name="author" content="Lilian Sirtoli Arquitetura">
+    <meta property="og:title" content="Ambientes pequenos, grandes soluções - Ebook">
+    <meta property="og:description"
+        content="Transforme espaços pequenos em ambientes inteligentes com nosso ebook exclusivo">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/ebook-cover.jpg">
+    <title>Ambientes pequenos, grandes soluções - Ebook | Lilian Sirtoli Arquitetura</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+
+    <!-- External stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* CSS Variables for easy theme customization */
+        :root {
+            /* Primary Colors */
+            --primary-color: #D9A299;
+            --primary-dark: #DCC5B2;
+            --primary-light: #F0E4D3;
+            --primary-lighten: #
+                /* Secondary Colors */
+                --secondary-color: #f59e0b;
+            --secondary-dark: #d97706;
+
+            /* Neutral Colors */
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+
+            /* Typography */
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+
+            /* Spacing */
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-3: 0.75rem;
+            --spacing-4: 1rem;
+            --spacing-5: 1.25rem;
+            --spacing-6: 1.5rem;
+            --spacing-8: 2rem;
+            --spacing-10: 2.5rem;
+            --spacing-12: 3rem;
+            --spacing-16: 4rem;
+            --spacing-20: 5rem;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+            /* Border Radius */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+
+            /* Transitions */
+            --transition-fast: 150ms ease-in-out;
+            --transition-normal: 300ms ease-in-out;
+            --transition-slow: 500ms ease-in-out;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--gray-700);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-4);
+        }
+
+        /* Button components */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-3) var(--spacing-6);
+            border: none;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-size: var(--font-size-base);
+            line-height: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-lg {
+            padding: var(--spacing-4) var(--spacing-8);
+            font-size: var(--font-size-lg);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            padding: var(--spacing-4) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"grain\" width=\"100\" height=\"100\" patternUnits=\"userSpaceOnUse\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"white\" opacity=\"0.1\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23grain)\"/></svg>');
+            opacity: 0.1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-8);
+        }
+
+        .logo {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-6);
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity var(--transition-fast);
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-12);
+            align-items: center;
+            padding: var(--spacing-16) 0;
+        }
+
+        .hero-content h1 {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-6);
+            color: var(--white);
+        }
+
+        .hero-content p {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-8);
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-xl);
+            width: 100%;
+            height: auto;
+        }
+
+        /* Features section */
+        .features {
+            padding: var(--spacing-20) 0;
+            background: var(--gray-50);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-16);
+        }
+
+        .section-header h2 {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .section-header p {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-8);
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: var(--spacing-8);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border: 1px solid var(--gray-200);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-6);
+        }
+
+        .feature-icon i {
+            font-size: var(--font-size-2xl);
+            color: var(--white);
+        }
+
+        .feature-card h3 {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .feature-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* About section */
+        .about {
+            padding: var(--spacing-20) 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-12);
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-6);
+        }
+
+        .about-text p {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
+            margin-bottom: var(--spacing-6);
+            line-height: 1.7;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-6);
+            margin-top: var(--spacing-8);
+        }
+
+        .stat {
+            text-align: center;
+            padding: var(--spacing-4);
+        }
+
+        .stat-number {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .about-image img {
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Testimonials section */
+        .testimonials {
+            padding: var(--spacing-20) 0;
+            background: var(--gray-50);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-8);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: var(--spacing-8);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            border: 1px solid var(--gray-200);
+        }
+
+        .testimonial-card::before {
+            content: '\"';
+            position: absolute;
+            top: var(--spacing-4);
+            left: var(--spacing-6);
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray-700);
+            margin-bottom: var(--spacing-6);
+            position: relative;
+            z-index: 1;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-4);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-1);
+        }
+
+        .author-info p {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+        }
+
+        /* CTA section */
+        .cta {
+            padding: var(--spacing-20) 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"dots\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\" opacity=\"0.1\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23dots)\"/></svg>');
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--spacing-8);
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-4);
+        }
+
+        .cta-text p {
+            font-size: var(--font-size-lg);
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .cta-form {
+            background: var(--white);
+            padding: var(--spacing-8);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            min-width: 400px;
+        }
+
+        .cta-form h3 {
+            color: var(--gray-900);
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            margin-bottom: var(--spacing-6);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-4);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-2);
+            color: var(--gray-700);
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: var(--spacing-3);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-base);
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: var(--spacing-4);
+        }
+
+        .privacy-notice {
+            font-size: var(--font-size-xs);
+            color: var(--gray-600);
+            text-align: center;
+            margin-top: var(--spacing-4);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: var(--spacing-12) 0 var(--spacing-6);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-8);
+            margin-bottom: var(--spacing-8);
+        }
+
+        .footer-section h3 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            margin-bottom: var(--spacing-4);
+            color: var(--white);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray-300);
+            text-decoration: none;
+            line-height: 1.7;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--spacing-4);
+            margin-top: var(--spacing-4);
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-800);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-fast);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            padding-top: var(--spacing-6);
+            text-align: center;
+            color: var(--gray-400);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--spacing-3);
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: var(--spacing-4);
+                margin-bottom: var(--spacing-6);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-8);
+                text-align: center;
+                padding: var(--spacing-12) 0;
+            }
+
+            .hero-content h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-8);
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-form {
+                min-width: auto;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .section-header h2 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .about-text h2 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .cta-text h2 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Utility classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with navigation and hero section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="#" class="logo">Lilian Sirtoli Arquitetura</a>
+                    <ul class="nav-links">
+                        <li><a href="#features">Benefícios</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Hero section -->
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Ambientes pequenos, grandes soluções</h1>
+                        <p>Descubra como transformar espaços compactos em ambientes inteligentes, funcionais e cheios de
+                            personalidade. Um guia completo com dicas práticas e soluções criativas.</p>
+                        <a href="#download" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-download" style="margin-right: 8px;"></i>
+                            Baixar Ebook
+                        </a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Ambiente pequeno bem decorado com soluções inteligentes" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que você vai aprender</h2>
+                <p>Descubra técnicas profissionais para maximizar cada metro quadrado do seu espaço</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Otimização de Espaços</h3>
+                    <p>Aprenda a usar cada centímetro de forma inteligente, criando ambientes funcionais sem abrir mão
+                        do estilo e conforto.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Soluções Criativas</h3>
+                    <p>Descubra truques e técnicas inovadoras para resolver os principais desafios de espaços pequenos
+                        de forma criativa.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design Inteligente</h3>
+                    <p>Domine as cores, texturas e móveis ideais para criar a sensação de amplitude e sofisticação em
+                        ambientes compactos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Ambientes Multifuncionais</h3>
+                    <p>Transforme um único espaço em múltiplos ambientes funcionais, adaptando-se às suas necessidades
+                        diárias.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Soluções Econômicas</h3>
+                    <p>Aprenda a decorar gastando pouco, com dicas de DIY e aproveitamento de itens que você já tem em
+                        casa.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Resultados Garantidos</h3>
+                    <p>Métodos testados e aprovados que garantem transformações reais e duradouras em qualquer tipo de
+                        espaço pequeno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre a Autora</h2>
+                    <p>Lilian Sirtoli é designer de interiores especializada em espaços compactos, com mais de 10 anos
+                        de experiência transformando ambientes pequenos em verdadeiros refúgios de estilo e
+                        funcionalidade.</p>
+
+                    <p>Formada em Design de Interiores e pós-graduada em Arquitetura de Interiores, Lilian já ajudou
+                        centenas de pessoas a descobrirem o potencial dos seus espaços, provando que tamanho não é
+                        documento quando se trata de criar ambientes incríveis.</p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Projetos Realizados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50k+</span>
+                            <span class="stat-label">Seguidores nas Redes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img style="max-width: 400px;"
+                        src="https://raw.githubusercontent.com/dss84/servidor_estaticos/refs/heads/main/IMG_7416.webp"
+                        alt="Lili Sirtoli - Designer de Interiores especialista em espaços pequenos" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que nossos leitores dizem</h2>
+                <p>Depoimentos reais de pessoas que transformaram seus espaços com nossas dicas</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Este ebook mudou completamente minha perspectiva sobre decoração.
+                        Consegui transformar meu apartamento de 35m² em um espaço super funcional e bonito. As dicas são
+                        práticas e fáceis de aplicar!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MF</div>
+                        <div class="author-info">
+                            <h4>Maria Fernanda</h4>
+                            <p>Arquiteta, São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Incrível como pequenas mudanças podem fazer uma diferença enorme! Segui
+                        as orientações do ebook e meu quarto ficou muito mais organizado e aconchegante. Recomendo para
+                        todos!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <h4>João Silva</h4>
+                            <p>Estudante, Rio de Janeiro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">As soluções apresentadas são geniais! Consegui criar um home office no
+                        meu quarto sem perder o conforto. O ebook é muito bem estruturado e cheio de ideias criativas.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AC</div>
+                        <div class="author-info">
+                            <h4>Ana Clara</h4>
+                            <p>Designer, Belo Horizonte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA section -->
+    <section id="download" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Transforme seu espaço hoje mesmo</h2>
+                    <p>Baixe gratuitamente nosso ebook e descubra como criar ambientes incríveis, independente do
+                        tamanho do seu espaço. Mais de 80 páginas de conteúdo exclusivo esperando por você!</p>
+                </div>
+
+                <div class="cta-form">
+                    <h3>Baixar Ebook Gratuito</h3>
+                    <form id="downloadForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <i class="fas fa-download" style="margin-right: 8px;"></i>
+                            Baixar Agora
+                        </button>
+
+                        <p class="privacy-notice">
+                            Seus dados estão seguros. Não enviamos spam e você pode cancelar a inscrição a qualquer
+                            momento.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Lilian Sirtoli Arquitetura</h3>
+                    <p>Especialista em transformar espaços pequenos em ambientes funcionais e estilosos. Ajudando
+                        pessoas a descobrirem o potencial dos seus lares.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Úteis</h3>
+                    <p><a href="#features">Benefícios</a></p>
+                    <p><a href="#about">Sobre a Autora</a></p>
+                    <p><a href="#testimonials">Depoimentos</a></p>
+                    <p><a href="#download">Download</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>contato@lilisirtoli.com.br</p>
+                    <p>+55 (11) 99999-9999</p>
+                    <p>Florianópolis, SC - Brasil</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Receba dicas exclusivas de decoração e design de interiores diretamente no seu e-mail.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lilian Sirtoli Arquitetura. Todos os direitos reservados. | <a
+                        style="text-decoration: none; color: #f3f4f6;" href="#">Política de Privacidade</a> | <a
+                        style="text-decoration: none; color: #f3f4f6;" href="#">Termos de Uso</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form handling and animations -->
+    <script>
+        // Form submission handling
+        document.getElementById('downloadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Basic validation
+            if (!name || !email) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor, insira um e-mail válido.');
+                return;
+            }
+
+            // Simulate form submission
+            const submitButton = document.querySelector('.form-submit');
+            const originalText = submitButton.innerHTML;
+
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>Enviando...';
+            submitButton.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                alert('Obrigado! Seu ebook foi enviado para o e-mail: ' + email);
+                document.getElementById('downloadForm').reset();
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+
+                // In a real scenario, you would redirect to a thank you page
+                // or trigger the actual download
+                window.open('data:text/plain;charset=utf-8,Obrigado por baixar nosso ebook!', '_blank');
+            }, 2000);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .testimonial-card, .about-text, .about-image').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add loading states to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function () {
+                if (!this.classList.contains('form-submit')) {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }
+            });
+        });
+
+        // Performance optimization: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Add keyboard navigation support
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', function () {
+            document.body.classList.remove('keyboard-navigation');
+        });
+    </script>
+
+    <!-- Schema.org structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Ambientes pequenos, grandes soluções - Ebook",
+        "description": "Transforme espaços pequenos em ambientes inteligentes com nosso ebook exclusivo. Descubra soluções práticas para maximizar cada metro quadrado do seu lar.",
+        "author": {
+            "@type": "Person",
+            "name": "Lilian Sirtoli",
+            "jobTitle": "Designer de Interiores",
+            "url": "https://liliansirtoli.arq.br"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Lilan Sirtoli Arquitetura"
+        },
+        "mainEntity": {
+            "@type": "DigitalDocument",
+            "name": "Ambientes pequenos, grandes soluções",
+            "description": "Ebook com dicas práticas para transformar espaços compactos em ambientes funcionais e estilosos",
+            "author": {
+                "@type": "Person",
+                "name": "Lilian Sirtoli"
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>
