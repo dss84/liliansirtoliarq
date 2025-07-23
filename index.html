@@ -25,744 +25,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Variables for easy theme customization */
-        :root {
-            /* Primary Colors */
-            --primary-color: #C78E85;
-            --primary-dark: #B89A91;
-            --primary-light:#FAC6BA;
-            --primary-lighten: #D8D6D9;
-            --primary-footer: #355059;
-                /* Secondary Colors */
-                --secondary-color: #f59e0b;
-            --secondary-dark: #d97706;
-
-            /* Neutral Colors */
-            --white: #ffffff;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --gray-900: #111827;
-            --normal-text: #355059;
-
-            /* Typography */
-            --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-size-xs: 0.75rem;
-            --font-size-sm: 0.875rem;
-            --font-size-base: 1rem;
-            --font-size-lg: 1.125rem;
-            --font-size-xl: 1.25rem;
-            --font-size-2xl: 1.5rem;
-            --font-size-3xl: 1.875rem;
-            --font-size-4xl: 2.25rem;
-            --font-size-5xl: 3rem;
-
-            /* Spacing */
-            --spacing-1: 0.25rem;
-            --spacing-2: 0.5rem;
-            --spacing-3: 0.75rem;
-            --spacing-4: 1rem;
-            --spacing-5: 1.25rem;
-            --spacing-6: 1.5rem;
-            --spacing-8: 2rem;
-            --spacing-10: 2.5rem;
-            --spacing-12: 3rem;
-            --spacing-16: 4rem;
-            --spacing-20: 5rem;
-
-            /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-
-            /* Border Radius */
-            --radius-sm: 0.25rem;
-            --radius-md: 0.375rem;
-            --radius-lg: 0.5rem;
-            --radius-xl: 0.75rem;
-            --radius-2xl: 1rem;
-
-            /* Transitions */
-            --transition-fast: 150ms ease-in-out;
-            --transition-normal: 300ms ease-in-out;
-            --transition-slow: 500ms ease-in-out;
-        }
-
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-family);
-            line-height: 1.6;
-            color: var(--normal-text);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Container utility */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-4);
-        }
-
-        /* Button components */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: var(--spacing-3) var(--spacing-6);
-            border: none;
-            border-radius: var(--radius-lg);
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            font-size: var(--font-size-base);
-            line-height: 1;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: var(--white);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: var(--white);
-        }
-
-        .btn-lg {
-            padding: var(--spacing-4) var(--spacing-8);
-            font-size: var(--font-size-lg);
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: var(--white);
-            padding: var(--spacing-4) 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"grain\" width=\"100\" height=\"100\" patternUnits=\"userSpaceOnUse\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"white\" opacity=\"0.1\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23grain)\"/></svg>');
-            opacity: 0.1;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--spacing-8);
-        }
-
-        .logo {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: var(--spacing-6);
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity var(--transition-fast);
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        /* Hero section */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-12);
-            align-items: center;
-            padding: var(--spacing-16) 0;
-        }
-
-        .hero-content h1 {
-            font-size: var(--font-size-5xl);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: var(--spacing-6);
-            color: var(--white);
-        }
-
-        .hero-content p {
-            font-size: var(--font-size-lg);
-            margin-bottom: var(--spacing-8);
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.7;
-        }
-
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            border-radius: var(--radius-2xl);
-            box-shadow: var(--shadow-xl);
-            width: 100%;
-            height: auto;
-        }
-
-        /* Features section */
-        .features {
-            padding: var(--spacing-20) 0;
-            background: var(--gray-50);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: var(--spacing-16);
-        }
-
-        .section-header h2 {
-            font-size: var(--font-size-4xl);
-            font-weight: 700;
-            color: var(--normal-text);
-            margin-bottom: var(--spacing-4);
-        }
-
-        .section-header p {
-            font-size: var(--font-size-2xl);
-            color: var(--normal-text);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-8);
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: var(--spacing-8);
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-sm);
-            transition: all var(--transition-normal);
-            border: 1px solid var(--gray-200);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-            border-radius: var(--radius-xl);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--spacing-6);
-        }
-
-        .feature-icon i {
-            font-size: var(--font-size-2xl);
-            color: var(--white);
-        }
-
-        .feature-card h3 {
-            font-size: var(--font-size-xl);
-            font-weight: 600;
-            color: var(--normal-text);
-            margin-bottom: var(--spacing-3);
-        }
-
-        .feature-card p {
-            color: var(--normal-text);
-            line-height: 1.7;
-        }
-
-        /* About section */
-        .about {
-            padding: var(--spacing-20) 0;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-12);
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: var(--font-size-4xl);
-            font-weight: 700;
-            color: var(--normal-text);
-            margin-bottom: var(--spacing-6);
-        }
-
-        .about-text p {
-            font-size: var(--font-size-lg);
-            color: var(--normal-text);
-            margin-bottom: var(--spacing-6);
-            line-height: 1.7;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-6);
-            margin-top: var(--spacing-8);
-        }
-
-        .stat {
-            text-align: center;
-            padding: var(--spacing-4);
-        }
-
-        .stat-number {
-            font-size: var(--font-size-3xl);
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: var(--font-size-sm);
-            color: var(--normal-text);
-            font-weight: 500;
-        }
-
-        .about-image img {
-            border-radius: var(--radius-2xl);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* Testimonials section */
-        .testimonials {
-            padding: var(--spacing-20) 0;
-            background: var(--gray-50);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--spacing-8);
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: var(--spacing-8);
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-sm);
-            position: relative;
-            border: 1px solid var(--gray-200);
-        }
-
-        .testimonial-card::before {
-            content: '\"';
-            position: absolute;
-            top: var(--spacing-4);
-            left: var(--spacing-6);
-            font-size: 4rem;
-            color: var(--primary-color);
-            opacity: 0.2;
-            font-family: serif;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: var(--normal-text);
-            margin-bottom: var(--spacing-6);
-            position: relative;
-            z-index: 1;
-            line-height: 1.7;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-4);
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 600;
-        }
-
-        .author-info h4 {
-            font-weight: 600;
-            color: var(--normal-text);
-            margin-bottom: var(--spacing-1);
-        }
-
-        .author-info p {
-            font-size: var(--font-size-sm);
-            color: var(--normal-text);
-        }
-
-        /* CTA section */
-        .cta {
-            padding: var(--spacing-20) 0;
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><defs><pattern id=\"dots\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\"><circle cx=\"10\" cy=\"10\" r=\"1\" fill=\"white\" opacity=\"0.1\"/></pattern></defs><rect width=\"100\" height=\"100\" fill=\"url(%23dots)\"/></svg>');
-        }
-
-        .cta-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: var(--spacing-8);
-            align-items: center;
-        }
-
-        .cta-text h2 {
-            font-size: var(--font-size-4xl);
-            font-weight: 700;
-            margin-bottom: var(--spacing-4);
-        }
-
-        .cta-text p {
-            font-size: var(--font-size-lg);
-            opacity: 0.9;
-            line-height: 1.7;
-        }
-
-        .cta-form {
-            background: var(--white);
-            padding: var(--spacing-8);
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-xl);
-            min-width: 400px;
-        }
-
-        .cta-form h3 {
-            color: var(--normal-text);
-            font-size: var(--font-size-xl);
-            font-weight: 600;
-            margin-bottom: var(--spacing-6);
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: var(--spacing-4);
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: var(--spacing-2);
-            color: var(--normal-text);
-            font-weight: 500;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: var(--spacing-3);
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius-lg);
-            font-size: var(--font-size-base);
-            transition: border-color var(--transition-fast);
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-submit {
-            width: 100%;
-            margin-top: var(--spacing-4);
-        }
-
-        .privacy-notice {
-            font-size: var(--font-size-xs);
-            color: var(--normal-text);
-            text-align: center;
-            margin-top: var(--spacing-4);
-            line-height: 1.5;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--primary-footer);
-            color: var(--white);
-            padding: var(--spacing-12) 0 var(--spacing-6);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-8);
-            margin-bottom: var(--spacing-8);
-        }
-
-        .footer-section h3 {
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            margin-bottom: var(--spacing-4);
-            color: var(--white);
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: var(--gray-300);
-            text-decoration: none;
-            line-height: 1.7;
-        }
-
-        .footer-section a:hover {
-            color: var(--white);
-        }
-
-        .social-links {
-            display: flex;
-            gap: var(--spacing-4);
-            margin-top: var(--spacing-4);
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            background: var(--gray-800);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color var(--transition-fast);
-        }
-
-        .social-links a:hover {
-            background: var(--primary-color);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--gray-800);
-            padding-top: var(--spacing-6);
-            text-align: center;
-            color: var(--gray-400);
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 var(--spacing-3);
-            }
-
-            .nav {
-                flex-direction: column;
-                gap: var(--spacing-4);
-                margin-bottom: var(--spacing-6);
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-8);
-                text-align: center;
-                padding: var(--spacing-12) 0;
-            }
-
-            .hero-content h1 {
-                font-size: var(--font-size-3xl);
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-8);
-            }
-
-            .about-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cta-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .cta-form {
-                min-width: auto;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: var(--font-size-2xl);
-            }
-
-            .section-header h2 {
-                font-size: var(--font-size-2xl);
-            }
-
-            .about-text h2 {
-                font-size: var(--font-size-2xl);
-            }
-
-            .cta-text h2 {
-                font-size: var(--font-size-2xl);
-            }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-on-scroll {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        /* Utility classes */
-        .text-center {
-            text-align: center;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <!-- Header with navigation and hero section -->
     <header class="header">
+        <div class="hero-image-container">
+            <img src="./images/1e229be2-2367-4f73-9dca-412a5f163307.png" alt="Ambiente pequeno e inteligente"
+                class="header-image">
+            <div class="hero-text">
+                <h1>Ambientes Pequenos, Grandes Soluções</h1>
+                <p>Transforme espaços compactos em ambientes inteligentes e funcionais</p>
+            </div>
+        </div>
         <div class="container">
             <div class="header-content">
-                <!-- Navigation -->
-                <nav class="nav">
-                    <a href="#" class="logo">Lilian Sirtoli Arquitetura</a>
-                    <ul class="nav-links">
-                        <li><a href="#features">Benefícios</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#testimonials">Depoimentos</a></li>
-                        <li><a href="#download">Download</a></li>
-                    </ul>
-                </nav>
-
                 <!-- Hero section -->
                 <div class="hero">
                     <div class="hero-content">
-                        <h1>Ambientes pequenos, grandes soluções</h1>
                         <p>Descubra como transformar espaços compactos em ambientes inteligentes, funcionais e cheios de
                             personalidade. Um guia completo com dicas práticas e soluções criativas.</p>
                         <a href="#download" class="btn btn-secondary btn-lg">
-                            <i class="fas fa-download" style="margin-right: 8px;"></i>
-                            Baixar Ebook
+                            QUERO GARANTIR MEU ACESSO AO EBOOK AMBIENTES PEQUENOS, GRANDES SOLUÇÕES
                         </a>
-                    </div>
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Ambiente pequeno bem decorado com soluções inteligentes" loading="eager">
                     </div>
                 </div>
             </div>
@@ -770,6 +62,39 @@
     </header>
 
     <!-- Features section -->
+    <section class="problems">
+        <div class="container">
+            <div class="problems-content">
+                <h2>Você Já Se Sentiu Assim?</h2>
+                <div class="problems-grid">
+                    <div class="problem-item">
+                        <i class="fas fa-home"></i>
+                        <h3>Sua casa não reflete quem você é</h3>
+                        <p>Você olha ao redor e sente que algo está faltando. O ambiente não transmite sua personalidade
+                            nem te faz sentir verdadeiramente em casa.</p>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h3>Não sabe por onde começar</h3>
+                        <p>Tem mil ideias na cabeça, mas na hora de executar fica perdido(a). Cores, móveis,
+                            decoração... tudo parece complicado demais.</p>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Falta tempo para planejar</h3>
+                        <p>Entre trabalho e família, sobra pouco tempo para pesquisar, planejar e coordenar um projeto
+                            de decoração.</p>
+                    </div>
+                    <div class="problem-item">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Medo de gastar errado</h3>
+                        <p>Preocupação em investir em móveis e decoração que não funcionem ou que você se arrependa
+                            depois.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
@@ -833,6 +158,29 @@
                 </div>
             </div>
         </div>
+        <a href="#download" class="btn btn-secondary btn-lg">
+            QUERO GARANTIR MEU ACESSO AO EBOOK AMBIENTES PEQUENOS, GRANDES SOLUÇÕES
+        </a>
+    </section>
+    <section class="promocao-lilian">
+        <div class="promocao-container">
+            <h2 class="promocao-titulo">Você já se sentiu inspirada pelos meus conteúdos? Imagine só ter acesso a todo
+                esse conhecimento de forma ainda mais completa e prática através do nosso eBook!</h2>
+
+            <p class="pergunta-texto">
+                E agora, você tem a chance de ter tudo isso por um investimento acessível. É o momento de parar de só
+                sonhar com os resultados e começar a alcançá-los.<br>
+                Qual é o investimento para ter acesso ao ebook?"
+            </p>
+
+            <p class="preco-label">APENAS 12X DE</p>
+            <p class="preco-valor">R$ 15,90</p>
+            <p class="opcao-pagamento">Ou R$ 147,00 à vista no cartão ou pix</p>
+
+            <a href="#" class="cta-button">SIM! QUERO MINHA CASA DOS SONHOS</a>
+            <p class="opcao-pagamento">Compra 100% segura, você receberá seu acesso logo após a confirmação de pagamento
+            </p>
+        </div>
     </section>
 
     <!-- About section -->
@@ -849,6 +197,11 @@
                         centenas de pessoas a descobrirem o potencial dos seus espaços, provando que tamanho não é
                         documento quando se trata de criar ambientes incríveis.</p>
 
+                    <p>Com uma abordagem prática e acessível, Lilian compartilha seu conhecimento através de ebooks,
+                        cursos e consultorias, sempre com o objetivo de empoderar seus leitores a transformarem seus
+                        lares
+                        com soluções inteligentes e criativas.</p>
+
                     <div class="about-stats">
                         <div class="stat">
                             <span class="stat-number">500+</span>
@@ -857,14 +210,6 @@
                         <div class="stat">
                             <span class="stat-number">10+</span>
                             <span class="stat-label">Anos de Experiência</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">95%</span>
-                            <span class="stat-label">Clientes Satisfeitos</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">50k+</span>
-                            <span class="stat-label">Seguidores nas Redes</span>
                         </div>
                     </div>
                 </div>
@@ -933,133 +278,150 @@
     <section id="download" class="cta">
         <div class="container">
             <div class="cta-content">
-                <div class="cta-text">
-                    <h2>Transforme seu espaço hoje mesmo</h2>
-                    <p>Adquira seu ebook e descubra como criar ambientes incríveis, independente do
-                        tamanho do seu espaço. Mais de 80 páginas de conteúdo exclusivo esperando por você!</p>
-                </div>
+                <div class="faq-lilian">
+                    <div class="faq-container">
+                        <h2 class="faq-titulo">Ainda tem alguma dúvida sobre o ebook?</h2>
+                        <p class="faq-subtitulo">VEJA ABAIXO PERGUNTAS FREQUENTES</p>
 
-                <div class="cta-form">
-                    <h3>Adquira seu eBook hoje mesmo</h3>
-                    <form id="downloadForm" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nome completo</label>
-                            <input type="text" id="name" name="name" required>
+                        <div class="faq-lista">
+                            <div class="faq-item">
+                                <button class="faq-pergunta" aria-expanded="false">
+                                    <span>Quais são as formas de pagamento aceitas?</span>
+                                    <i class="faq-icon">+</i>
+                                </button>
+                                <div class="faq-resposta">
+                                    <p>Cartão de crédito, PayPal, Samsung Pay, Google Pay, PIX ou boleto bancário (sendo
+                                        PIX e boleto somente para compra à vista).</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-pergunta" aria-expanded="false">
+                                    <span>Como funciona a consultoria de interiores?</span>
+                                    <i class="faq-icon">+</i>
+                                </button>
+                                <div class="faq-resposta">
+                                    <p>Após a confirmação do pagamento, você receberá acesso imediato à plataforma com
+                                        todo o conteúdo da consultoria. Inclui análise personalizada do seu espaço, guia
+                                        de cores, layout otimizado e sugestões de móveis e decoração.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-pergunta" aria-expanded="false">
+                                    <span>Onde posso encontrar o conteúdo adquirido?</span>
+                                    <i class="faq-icon">+</i>
+                                </button>
+                                <div class="faq-resposta">
+                                    <p>Todo o material estará disponível na nossa plataforma virtual. Após a confirmação
+                                        do pagamento, todas as credenciais e instruções serão enviadas para o e-mail
+                                        utilizado na transação, permitindo acesso instantâneo.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-pergunta" aria-expanded="false">
+                                    <span>Posso baixar o material para uso posterior?</span>
+                                    <i class="faq-icon">+</i>
+                                </button>
+                                <div class="faq-resposta">
+                                    <p>Sim, é possível baixar todo o conteúdo adquirido. No entanto, é fundamental
+                                        respeitar os termos de direitos autorais, sendo vedado o compartilhamento ou uso
+                                        comercial não autorizado.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-pergunta" aria-expanded="false">
+                                    <span>A consultoria serve para qualquer tipo de ambiente?</span>
+                                    <i class="faq-icon">+</i>
+                                </button>
+                                <div class="faq-resposta">
+                                    <p>Sim! Nossa metodologia funciona para salas, quartos, cozinhas, banheiros,
+                                        escritórios e qualquer ambiente que você deseje transformar. O conteúdo é
+                                        adaptável para diferentes estilos e orçamentos.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-pergunta" aria-expanded="false">
+                                    <span>Tenho suporte após a compra?</span>
+                                    <i class="faq-icon">+</i>
+                                </button>
+                                <div class="faq-resposta">
+                                    <p>Claro! Você terá acesso ao nosso canal de suporte exclusivo por 30 dias para
+                                        esclarecer dúvidas sobre a aplicação das técnicas e conceitos apresentados na
+                                        consultoria.</p>
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary form-submit">
-                            <i class="fas fa-download" style="margin-right: 8px;"></i>
-                            Comprar agora
-                        </button>
-
-                        <p class="privacy-notice">
-                            Seus dados estão seguros. Não enviamos spam e você pode cancelar a inscrição a qualquer
-                            momento.
-                        </p>
-                    </form>
                 </div>
             </div>
+            <div class="cta-text">
+                <h2>Transforme seu espaço hoje mesmo</h2>
+                <p>Adquira seu ebook e descubra como criar ambientes incríveis, independente do
+                    tamanho do seu espaço. Mais de 80 páginas de conteúdo exclusivo esperando por você!</p>
+            </div>
         </div>
+        <a href="#" class="btn btn-secondary-end btn-lg">
+            QUERO GARANTIR MEU ACESSO AO EBOOK AMBIENTES PEQUENOS, GRANDES SOLUÇÕES
+        </a>
+
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Lilian Sirtoli Arquitetura</h3>
-                    <p>Especialista em transformar espaços pequenos em ambientes funcionais e estilosos. Ajudando
-                        pessoas a descobrirem o potencial dos seus lares.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/liliansirtoli.arq/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/liliansirtoli.arquitetura/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://br.pinterest.com/liliansirtoliarquiteta/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Links Úteis</h3>
-                    <p><a href="#features">Benefícios</a></p>
-                    <p><a href="#about">Sobre a Autora</a></p>
-                    <p><a href="#testimonials">Depoimentos</a></p>
-                    <p><a href="#download">Download</a></p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>
-                        <a href="mailto:contato@liliansirtoli.arq.br">contato@liliansirtoli.arq.br</a>
-                    </p>
-                    <p>
-                        <a href="tel:0(48)99212-1200">+55 (48) 99212-1200</a>
-                    </p>
-                    <p>Florianópolis, SC - Brasil</p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <p>Receba dicas exclusivas de decoração e design de interiores diretamente no seu e-mail.</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Lilian Sirtoli Arquitetura. Todos os direitos reservados.</p>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Lilian Sirtoli Arquitetura. Todos os direitos reservados. | <a
-                        style="text-decoration: none; color: #f3f4f6;" href="#">Política de Privacidade</a> | <a
-                        style="text-decoration: none; color: #f3f4f6;" href="#">Termos de Uso</a></p>
-            </div>
-        </div>
     </footer>
 
     <!-- JavaScript for form handling and animations -->
     <script>
-        // Form submission handling
-        document.getElementById('downloadForm').addEventListener('submit', function (e) {
-            e.preventDefault();
 
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+        // FAQ Toggle functionality - CORRIGIDO
+        function initializeFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
 
-            // Basic validation
-            if (!name || !email) {
-                alert('Por favor, preencha todos os campos.');
-                return;
-            }
+            faqItems.forEach(item => {
+                const pergunta = item.querySelector('.faq-pergunta');
+                const resposta = item.querySelector('.faq-resposta');
 
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Por favor, insira um e-mail válido.');
-                return;
-            }
+                if (pergunta && resposta) {
+                    pergunta.addEventListener('click', function () {
+                        const isActive = item.classList.contains('active');
 
-            // Simulate form submission
-            const submitButton = document.querySelector('.form-submit');
-            const originalText = submitButton.innerHTML;
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('active');
+                                const otherResposta = otherItem.querySelector('.faq-resposta');
+                                if (otherResposta) {
+                                    otherResposta.style.maxHeight = '0';
+                                }
+                            }
+                        });
 
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 8px;"></i>Enviando...';
-            submitButton.disabled = true;
-
-            // Simulate API call
-            setTimeout(() => {
-                alert('Obrigado! Seu ebook foi enviado para o e-mail: ' + email);
-                document.getElementById('downloadForm').reset();
-                submitButton.innerHTML = originalText;
-                submitButton.disabled = false;
-
-                // In a real scenario, you would redirect to a thank you page
-                // or trigger the actual download
-                window.open('data:text/plain;charset=utf-8,Obrigado por baixar nosso ebook!', '_blank');
-            }, 2000);
-        });
+                        // Toggle current FAQ item
+                        if (isActive) {
+                            item.classList.remove('active');
+                            resposta.style.maxHeight = '0';
+                        } else {
+                            item.classList.add('active');
+                            resposta.style.maxHeight = resposta.scrollHeight + 'px';
+                        }
+                    });
+                }
+            });
+        }
 
         // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
@@ -1087,12 +449,18 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.feature-card, .testimonial-card, .about-text, .about-image').forEach(el => {
-            observer.observe(el);
-        });
+        function observeElements() {
+            const elementsToObserve = document.querySelectorAll(
+                '.feature-card, .testimonial-card, .about-text, .about-image, .faq-item, .promocao-container'
+            );
+
+            elementsToObserve.forEach(el => {
+                observer.observe(el);
+            });
+        }
 
         // Add loading states to buttons
-        document.querySelectorAll('.btn').forEach(button => {
+        document.querySelectorAll('.btn, .cta-button').forEach(button => {
             button.addEventListener('click', function () {
                 if (!this.classList.contains('form-submit')) {
                     this.style.transform = 'scale(0.95)';
@@ -1104,21 +472,23 @@
         });
 
         // Performance optimization: Lazy load images
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
+        function initializeLazyLoading() {
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    });
                 });
-            });
 
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                imageObserver.observe(img);
-            });
+                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
         }
 
         // Add keyboard navigation support
@@ -1126,11 +496,63 @@
             if (e.key === 'Tab') {
                 document.body.classList.add('keyboard-navigation');
             }
+
+            // ESC key closes open FAQ items
+            if (e.key === 'Escape') {
+                const activeFAQ = document.querySelector('.faq-item.active');
+                if (activeFAQ) {
+                    activeFAQ.classList.remove('active');
+                    const resposta = activeFAQ.querySelector('.faq-resposta');
+                    if (resposta) {
+                        resposta.style.maxHeight = '0';
+                    }
+                }
+            }
         });
 
         document.addEventListener('mousedown', function () {
             document.body.classList.remove('keyboard-navigation');
         });
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Aguarda um pouco para garantir que o DOM está totalmente carregado
+            setTimeout(() => {
+                initializeFAQ();
+                observeElements();
+                initializeLazyLoading();
+
+                // Debug: verificar se os elementos FAQ existem
+                console.log('FAQ items encontrados:', document.querySelectorAll('.faq-item').length);
+
+            }, 100);
+
+            // Add smooth scroll behavior to CTA buttons
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+
+        // Handle window resize for FAQ responsiveness
+        window.addEventListener('resize', function () {
+            const activeFAQs = document.querySelectorAll('.faq-item.active .faq-resposta');
+            activeFAQs.forEach(resposta => {
+                resposta.style.maxHeight = resposta.scrollHeight + 'px';
+            });
+        });
+
     </script>
 
     <!-- Schema.org structured data for SEO -->
