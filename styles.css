@@ -512,8 +512,27 @@ img {
 
 .about-content {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
+}
+
+.about-text {
+    flex: 1 1 50%;
+}
+
+.about-image {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-2xl);
+    margin: 0 auto;
 }
 
 .about-text h2 {
@@ -553,13 +572,6 @@ img {
     font-size: var(--font-size-sm);
     color: var(--normal-text);
     font-weight: 500;
-}
-
-.about-image img {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-2xl);
 }
 
 /* Testimonials section */
@@ -1080,10 +1092,15 @@ img {
     position: absolute;
     width: 1px;
     height: 1px;
-    padding: 0;
+    padding: 0;    margin: -1px;    overflow: hidden;    clip: rect(0, 0, 0, 0);    white-space: nowrap;    border: 0;}/* Utility classes */.text-center {    text-align: center;}.hidden {    display: none;}.sr-only {    position: absolute;    width: 1px;    height: 1px;    padding: 0;
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+.cta a,
+.btn-secondary-end {
+    margin-bottom: 3rem; /* Espaço extra antes do footer */
 }
